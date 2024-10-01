@@ -44,8 +44,8 @@ public class PlantNutrition implements INutrition {
     }
 
     @Override
-    public void calculateDailyNutritionNeed(double heightMeters){
-        this.dailyNutritionNeed = getLiterNutritionBase() + (getLiterNutritionTimesHeight()* heightMeters);
+    public void calculateDailyNutritionNeed(double heightInMeters){
+        this.dailyNutritionNeed = getLiterNutritionBase() + (getLiterNutritionTimesHeight()* heightInMeters);
     }
 
     @Override
