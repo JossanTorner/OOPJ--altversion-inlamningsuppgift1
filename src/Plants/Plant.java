@@ -1,6 +1,6 @@
 package Plants;
 
-import Nutrition.PlantNutrition;
+import PlantCare.PlantCare;
 
 public abstract class Plant {
 
@@ -8,14 +8,14 @@ public abstract class Plant {
     private final PlantType PLANT_TYPE;
     private String name;
     private double heightInMeters;
-    private PlantNutrition nutritionPlan;
+    private PlantCare carePlan;
 
     //Konstruktor
-    public Plant(String name, double heightInMeters, PlantType plantType, PlantNutrition nutritionPlan) {
+    public Plant(String name, double heightInMeters, PlantType plantType, PlantCare carePlan) {
 
         setName(name);
         setHeightInMeters(heightInMeters);
-        setNutritionPlan(nutritionPlan);
+        setCarePlan(carePlan);
         this.PLANT_TYPE = plantType;
 
     }
@@ -26,16 +26,16 @@ public abstract class Plant {
         return PLANT_TYPE;
     }
 
-    public PlantNutrition getNutritionPlan() {
-        return nutritionPlan;
+    public PlantCare getCarePlan() {
+        return carePlan;
     }
 
-    public void setNutritionPlan(PlantNutrition nutritionPlan) {
-        if (nutritionPlan == null) {
+    public void setCarePlan(PlantCare carePlan) {
+        if (carePlan == null) {
             throw new IllegalArgumentException("Ogiltig parameter");
         }
-        this.nutritionPlan = nutritionPlan;
-        nutritionPlan.calculateDailyNutritionNeed(heightInMeters); //Här beräknas näringsbehov för objektet
+        this.carePlan = carePlan;
+        carePlan.calculateDailyNeed(heightInMeters); //Här beräknas näringsbehov för objektet
     }
 
     public String getName() {
@@ -63,8 +63,8 @@ public abstract class Plant {
         return name +
                 "\nPlanttyp: " + getPlantType().getType() +
                 "\nHöjd: " + getHeightWithUnit() +
-                "\nNäringstyp: " + nutritionPlan.getNutritionType().getType() +
-                "\nNäringsbehov/dag: " + nutritionPlan.getNutritionWithUnit();
+                "\nNäringstyp: " + carePlan.getLiquidType().getType() +
+                "\nNäringsbehov/dag: " + carePlan.getDailyNeedWithUnit();
     }
 
 }

@@ -1,6 +1,6 @@
-package Nutrition;
+package PlantCare;
 
-public enum NutritionType {
+public enum LiquidType {
 
     KRANVATTEN ("kranvatten"),
     PROTEINDRYCK ("proteindryck"),
@@ -8,7 +8,7 @@ public enum NutritionType {
 
     final String type;
 
-    NutritionType(String t) {
+    LiquidType(String t) {
         this.type = t;
     }
 
