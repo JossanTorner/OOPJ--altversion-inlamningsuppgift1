@@ -4,7 +4,7 @@ import PlantCare.PlantCare;
 
 public abstract class Plant {
 
-    //Inkapsling; gör instansvariabler private och åtkomliga via setters&getters
+    //Inkapsling; gör instansvariabler private och åtkomliga via setters getters
     private final PlantType PLANT_TYPE;
     private String name;
     private double heightInMeters;

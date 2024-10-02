@@ -1,5 +1,6 @@
 package PlantCare;
 
+//enum för vätsketyp
 public enum LiquidType {
 
     KRANVATTEN ("kranvatten"),

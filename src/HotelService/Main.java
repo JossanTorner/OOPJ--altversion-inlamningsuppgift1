@@ -6,7 +6,7 @@ public class Main {
 
     private PlantHotel greenest;
 
-    //Polymorfism: får olika svar på plantInfo beroende på vilken instans av Plant som skrivs ut
+    //Polymorfism - får olika svar på plantInfo beroende på vilken instans av Plant som skrivs ut
     public void displayPlantInfo(String plantName){
         Plant plant = greenest.findPlant(plantName);
         if(plant != null){

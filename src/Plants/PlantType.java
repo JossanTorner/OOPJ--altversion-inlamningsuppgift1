@@ -1,5 +1,6 @@
 package Plants;
 
+//enum för planttyp
 public enum PlantType {
 
     KAKTUS ("kaktus"),

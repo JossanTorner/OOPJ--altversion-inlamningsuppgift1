@@ -4,6 +4,7 @@ import Plants.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//Klass som representerar hotellet och håller hotellgästerna
 public class PlantHotel {
 
     private List<Plant> hotelGuests;
