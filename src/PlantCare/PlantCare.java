@@ -2,7 +2,7 @@ package PlantCare;
 
 public class PlantCare implements INutrition {
 
-    //Inkapsling; gör variabler privata och åtkomliga via setters & getters
+    //Inkapsling; gör variabler privata och åtkomliga via setters&getters
     private final LiquidType liquidType;
     private double baseLiquidAmountLiters;
     private double liquidTimesHeightLiters;
