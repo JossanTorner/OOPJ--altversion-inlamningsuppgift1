@@ -63,8 +63,8 @@ public abstract class Plant {
         return name +
                 "\nPlanttyp: " + getPlantType().getType() +
                 "\nHöjd: " + getHeightWithUnit() +
-                "\nNäringstyp: " + carePlan.getLiquidType().getType() +
-                "\nNäringsbehov/dag: " + carePlan.getDailyNeedWithUnit();
+                "\nVätskesort: " + carePlan.getLiquidType().getType() +
+                "\nVätska/dag: " + carePlan.getDailyNeedWithUnit();
     }
 
 }
