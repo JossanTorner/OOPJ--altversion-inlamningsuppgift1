@@ -54,14 +54,8 @@ public abstract class Plant {
         this.heightInMeters = heightInMeters;
     }
 
-    //Ger en string med passade enhet för height
     public String getHeightWithUnit(){
-        if (getHeightInMeters() < 1){
-            return (getHeightInMeters() * 100) + " cm ";
-        }
-        else{
-            return getHeightInMeters() + " m ";
-        }
+        return (getHeightInMeters() < 1) ? (getHeightInMeters()*100) + " cm" :  getHeightInMeters() + " m ";
     }
 
     //Skriver ut all info om plantan

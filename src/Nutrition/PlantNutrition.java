@@ -50,11 +50,6 @@ public class PlantNutrition implements INutrition {
 
     @Override
     public String getNutritionWithUnit(){
-        if (getDailyNutritionNeed() < 1){
-            return (getDailyNutritionNeed() * 100) + " cl ";
-        }
-        else{
-            return getDailyNutritionNeed() + " liter ";
-        }
+        return (getDailyNutritionNeed() < 1) ? (getDailyNutritionNeed() * 100) + " cl " : getDailyNutritionNeed() + " liter ";
     }
 }
